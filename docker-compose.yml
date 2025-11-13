@@ -1,0 +1,10 @@
+services:
+  zlib-metadata-importer:
+    build: .
+    container_name: zlib-metadata-importer
+    volumes:
+      - .:/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
