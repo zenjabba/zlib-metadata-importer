@@ -2,11 +2,21 @@
 
 This project imports and indexes Anna's Archive ZLib metadata files into a SQLite database for fast querying and efficient book import operations.
 
+**GitHub Repository**: https://github.com/zenjabba/zlib-metadata-importer
+
 ## Overview
 
 The metadata files contain:
 - **zlib3_files**: 8.3M entries mapping zlibrary_id to MD5 hashes
 - **zlib3_records**: 98.4M book metadata records (title, author, language, etc.)
+
+## Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/zenjabba/zlib-metadata-importer.git
+cd zlib-metadata-importer
+```
 
 ## Quick Start
 
@@ -76,10 +86,10 @@ optional arguments:
 ## Files
 
 - `schema.sql` - Database schema definition
-- `import_metadata.py` - Import script with progress tracking
+- `import_metadata.py` - Import script with progress tracking and CLI argument support
 - `query_metadata.py` - Query tool for lookups
-- `Dockerfile` - Container definition
-- `docker-compose.yml` - Docker Compose configuration
+- `Dockerfile` - Container definition for one-shot execution
+- `docker-compose.yml` - Optional Docker Compose configuration (legacy)
 
 ## Database Schema
 
