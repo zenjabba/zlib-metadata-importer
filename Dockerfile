@@ -8,7 +8,6 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy application files
-COPY schema.sql .
 COPY import_metadata.py .
 COPY query_metadata.py .
 

@@ -85,11 +85,11 @@ optional arguments:
 
 ## Files
 
-- `schema.sql` - Database schema definition
-- `import_metadata.py` - Import script with progress tracking and CLI argument support
+- `import_metadata.py` - Import script with embedded schema, progress tracking, and CLI argument support
 - `query_metadata.py` - Query tool for lookups
 - `Dockerfile` - Container definition for one-shot execution
 - `docker-compose.yml` - Optional Docker Compose configuration (legacy)
+- `schema.sql` - Database schema reference (embedded in import_metadata.py)
 
 ## Database Schema
 
@@ -186,4 +186,4 @@ The script saves progress every 100k records. Just run it again to resume.
 The database will be ~15-25 GB. Ensure you have at least 30 GB free.
 
 ### Schema file not found (Docker)
-Make sure you're running from the directory containing the metadata files.
+The schema is now embedded in the Python script, so no separate schema file is needed.
